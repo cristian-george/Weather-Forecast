@@ -1,3 +1,37 @@
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #f2ecf0 #011a1b;
+  }
+  
+  *::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #f2ecf0;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #011a1b;
+    border-radius: 20px;
+    border: 3px solid #f2ecf0;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #f2ecf0;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #011a1b;
+    border-radius: 20px;
+    border: 3px solid #f2ecf0;
+  }
+
+
 .where-to {
     background: url('images/cloudy.jpg') no-repeat;
     background-size: cover;
