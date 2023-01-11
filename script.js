@@ -39,19 +39,6 @@ function displayWeather(data) {
         imageUrl += 'foggy.jpg';
     }
     document.body.style.backgroundImage = `url('${imageUrl}')`;
-
-    // update the weather information
-    const location = data.name;
-    const time = new Date(data.dt * 1000).toLocaleString();
-    const temperature = Math.round(data.main.temp - 273.15);
-    const description = data.weather[0].description;
-    document.getElementById('successMessage').innerHTML = `
-    <p>Location: ${location}</p>
-    <p>Time: ${time}</p>
-    <p>Temperature: ${temperature}°C</p>
-    <p>Description: ${description}</p>
-  `;
-    document.getElementById('successMessage').style.display = 'block';
 }
 
 // update the page with the forecast information
