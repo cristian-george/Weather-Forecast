@@ -1,0 +1,54 @@
+.where-to {
+    background: url('images/cloudy.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.section-content {
+    max-width: 900px;
+}
+
+.grid-container {
+    display: grid;
+    grid-gap: 16pt;
+}
+
+.grid-1-1 {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.mobile-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.orange-text {
+    color: #eb6e4b;
+}
+
+.white-text {
+    color: #ffffff !important;
+}
+
+.desktop-only {
+    display: none;
+}
+
+body {
+    background: no-repeat center center fixed;
+    background-size: cover;
+}
+
+.invalid-feedback {
+    display: none;
+}
+
+.valid-feedback {
+    display: none;
+}
