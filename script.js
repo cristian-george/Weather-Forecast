@@ -26,18 +26,9 @@ async function getForecast(location) {
 function displayWeather(data) {
     // update the background image
     const weather = data.weather[0].main.toLowerCase();
-    let imageUrl = 'images/';
-    if (weather === 'clear') {
-        imageUrl += 'sunny.jpg';
-    } else if (weather === 'clouds') {
-        imageUrl += 'cloudy.jpg';
-    } else if (weather === 'rain') {
-        imageUrl += 'rainy.jpg';
-    } else if (weather === 'snow') {
-        imageUrl += 'snowy.jpg';
-    } else if (weather == 'fog') {
-        imageUrl += 'foggy.jpg';
-    }
+
+    let imageUrl = "images/" + weather + ".jpg";
+
     document.body.style.backgroundImage = `url('${imageUrl}')`;
 }
 
@@ -45,7 +36,8 @@ function displayWeather(data) {
 function displayForecast(data) {
     const location = data.city.name;
     const forecastList = data.list;
-    let forecastHtml = `<h2>Forecast for ${location}</h2><div class="list-group">`;
+    let forecastHtml = `<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action"> <h2>Forecast for ${location}</h2> </a>`;
     forecastList.forEach(forecast => {
         const time = new Date(forecast.dt * 1000).toLocaleString();
         const temperature = Math.round(forecast.main.temp - 273.15);
